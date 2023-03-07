@@ -1,5 +1,5 @@
 # для запуска проекта запустить 
-redis:
+redis:/n
 docker-compose up
 celery:
 celery -A upscale.celery_app worker
