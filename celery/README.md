@@ -1,3 +1,18 @@
+#для запуска проекта запустить 
+redis:
+docker-compose up
+celery:
+celery -A upscale.celery_app worker
+flask из модуля main:
+if __name__ == '__main__':
+    app.run(host='127.0.0.1', port=5000)
+
+
+
+
+
+
+
 # Домашнее задание к лекции «Celery»
 
 Специалист по машинному обучению создал модель для 
