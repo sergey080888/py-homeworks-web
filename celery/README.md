@@ -3,6 +3,7 @@
 redis:
 
 docker-compose up
+
 celery:
 
 celery -A upscale.celery_app worker
