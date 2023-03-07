@@ -5,7 +5,7 @@ from celery import Celery
 
 celery_app = Celery(broker='redis://127.0.0.1:6379/1', backend='redis://127.0.0.1:6379/2')
 
-
+@celery_app.task
 def upscale(input_path: str, output_path: str, model_path: str = 'EDSR_x2.pb') -> None:
     """
     :param input_path: путь к изображению для апскейла
@@ -23,10 +23,3 @@ def upscale(input_path: str, output_path: str, model_path: str = 'EDSR_x2.pb') -
 
 
 
-@celery_app.task
-def example():
-    upscale('lama_300px.png', 'lama_600px.png')
-
-
-# if __name__ == '__main__':
-#     example()
