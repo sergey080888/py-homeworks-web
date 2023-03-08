@@ -26,7 +26,7 @@ class Upscale(MethodView):
         image_id = self.save_image("image_1")
 
 
-        task = upscale.delay(image_id, '600px')
+        task = upscale.delay(image_id, '600px.png')
         return jsonify({"task_id": task.id})
 
     def save_image(self, field):
