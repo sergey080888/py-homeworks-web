@@ -20,7 +20,7 @@ while True:
         print("ok")
         break
 
-print('________________________________________')
+print("________________________________________")
 file = resp.json().get("file_link")
 print(file)
 resp = requests.get(f"http://127.0.0.1:5000/processed/{file}")

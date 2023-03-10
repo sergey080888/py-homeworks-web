@@ -38,7 +38,7 @@ class Upscale(MethodView):
             return jsonify({"status": task.status})
         elif file:
             file_name = os.path.basename(file)
-            print('file_name-->', {file})
+            print("file_name-->", {file_name})
             safe_path = safe_join(app.config["UPLOAD_FOLDER"], file_name)
             try:
                 return send_file(safe_path, as_attachment=True)
