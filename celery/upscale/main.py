@@ -1,5 +1,4 @@
 from werkzeug.security import safe_join
-
 from upscale import upscale, celery_app
 from flask import Flask, jsonify, request, send_file, abort
 from flask.views import MethodView
